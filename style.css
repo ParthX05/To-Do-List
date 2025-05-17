@@ -1,0 +1,147 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    background:linear-gradient(135deg, #1f1c2c, #928dab);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.todo-container{
+    width:100%;
+    max-width:500px;
+    background:rgba(255, 255, 255, 0.1);
+    padding:32px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    color:#fff;
+}
+
+.todo-container h1{
+    text-align:center;
+    margin-bottom:16px;
+    font-size:32px;
+}
+
+.input-section input{
+    flex:1;
+    padding:17px 25px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    margin-left:40px;
+    margin-bottom:15px;
+    padding-right:70px;
+}
+
+.input-section input:hover{
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.input-section button{
+    padding:17px 16px;
+    background:#00c6ff;
+    border:none;
+    border-radius:10px;;
+    color:white;
+    cursor:pointer;
+    transition:0.3 ease;
+    margin-left:5px;
+}
+
+.input-section button.clear{
+    text-align:center;
+    margin-left:40%;
+}
+
+.input-section button:hover{
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    background:#0072ff;
+}
+
+ul li{
+    list-style:none;
+    padding:12px 8px 12px 50px;
+    font-size:20px;
+    user-select:none;
+    cursor:pointer;
+    position:relative;
+}
+
+ul li::before{
+    content:'';
+    position:absolute;
+    height:28px;
+    width:28px;
+    border-radius:50%;
+    background-image:url(uncheck.png);
+    background-size:cover;
+    background-position:center;
+    top:12px;
+    left:8px;
+}
+
+ul li.checked{
+    text-decoration:line-through;
+    opacity:0.6;
+}
+
+ul li.checked::before{
+    background-image:url(check.png);
+}
+
+ul li span{
+    position:absolute;
+    right:0;
+    top:5px;
+    width:40px;
+    height:45px;
+    font-size:30px;
+    color: white;
+    line-height:40px;
+    text-align:center;
+    border-radius:20%;
+    font-weight:bold;
+}
+
+ul li span:hover{
+    background:rgba(255, 255, 255, 0.1);
+}
+
+#message{
+    font-size:20px;
+    font-weight:bold;
+    color:#a6acaf;
+    margin-top:10px;
+}
+
+#confirmation{
+    display:none;
+    margin-top:10px;
+}
+
+#confirmation button{
+    font-size:20px;
+    font-weight:bold;
+    background-color:transparent;
+    border:none;
+    cursor:pointer;
+}
+
+#confirmation button:hover{
+    text-decoration:underline;
+}
+
+span{
+    font-size:20px;
+    font-weight:bold;
+    color:#a6acaf;
+    margin-left:25px;
+}

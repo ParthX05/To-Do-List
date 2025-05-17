@@ -1,0 +1,31 @@
+<!DOCTYPE.html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>To-Do list</title>
+    </head>
+    <body>
+        
+        <div class="todo-container">
+            <h1>My To-Do List</h1>
+            <div class="input-section">
+                <input type="text" id="todo-input" placeholder="Add a new task">
+                <button onclick="addtask()">Add</button><button onclick="cleartask()" class="clear">Clear Tasks</button>
+            </div>
+            <ul id="todo-list">
+                <!--<li class="checked">Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li>-->
+            </ul>
+            <p id="message"></p>
+            <div id="confirmation" >
+                <span>Are you sure you want to clear all tasks?</span><br><br>
+                <button onclick="confirmClear(true)" style="margin-left:170px;">Yes</button>
+                <button onclick="confirmClear(false)"style="margin-left:20px;">No</button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
